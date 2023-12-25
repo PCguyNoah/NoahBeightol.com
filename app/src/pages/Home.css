@@ -1,0 +1,10 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.branded-text {
+  color: #fff;
+  font-weight: 900;
+}
