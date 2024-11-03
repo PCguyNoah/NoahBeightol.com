@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import AppBar from '@mui/material/AppBar';
-import headshot from '../images/headshot.png'
+import Avatar from '@mui/material/Avatar';
+import headshot from '../images/DSG_Interns-0178-Edit.jpg'
 
 const Home = () => {
   document.title = '| Noah Beightol'
@@ -19,6 +20,19 @@ const Home = () => {
               <button className='branded-title-button'>About</button>
               <button className='branded-title-button'>Contact</button>
             </div>
+          </div>
+        </div>
+        <div className='main-content-container'>
+          <div className='card3'>
+            Hello
+          </div>
+          <div className='card'></div>
+          <div className='card2 '>
+            <img 
+              className='image'
+              alt="Noah Beightol"
+              src={headshot}
+            />
           </div>
         </div>
         <div className='main-content-container'>
