@@ -4,7 +4,10 @@ body, html {
 }
 
 body, html {
-  background: #121317;
+  
+  background-color: #C850C0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   position: relative;
   background-size:auto;
@@ -12,6 +15,7 @@ body, html {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   overflow: overlay;
+  
 }
 
 code {
