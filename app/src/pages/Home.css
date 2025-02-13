@@ -14,25 +14,39 @@
   font-size: 2rem;
   font-weight: 700;
 }
+
+.title-container {
+  padding-bottom: 3%;
+  padding-top: 5%;
+}
+
 .typed-cursor {
   font-size: 2rem;
   color: #FFF;
 }
+
+.card-container {
+  padding-bottom: 10%;
+}
 .card {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   background-color: #fff;
   border-radius: 25px;
   height: 75vw;
   width: 75vw;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-}
-.card2 {
-  height:75vw;
-  width: 75vw;
-  border-radius: 20px;
-  animation: expand 0.5s ease-out forwards;
-  animation-delay: 0.2s;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  animation: expand 0.7s ease-out forwards;
+  animation-delay: 1.0s;
   transition: width .3s;
   opacity: 0;
+}
+
+.headshot-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
 }
 
 .bottom-container {
@@ -41,16 +55,14 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  /* Optional: give it a background to stand out */
-  background-color: #fff;
+  background-color: transparent;
   /* Adjust spacing as you like */
   padding: 1rem;  
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
   
 }
 .bottom-container-text {
   animation: expand 0.4s ease-out forwards;
-  animation-delay: 0.4s;
+  animation-delay: 2.0s;
   transition: width .3s;
   opacity: 0;
 }
