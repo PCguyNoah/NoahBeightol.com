@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
+import Typed from 'typed.js';
+import SchoolIcon from '@mui/icons-material/School';
 import headshot from '../images/Noah-headshot.JPG'
 import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import Typed from 'typed.js';
+import CodeIcon from '@mui/icons-material/Code';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Home = () => {
   document.title = '| Noah Beightol'
+
   const [activeSection, setActiveSection] = React.useState('');
   const el = React.useRef(null);
   React.useEffect(() =>
   {
       const typed = new Typed(el.current, {
-          strings: ['Welcome!^1000','Noah Beightol ^1000'],
+          strings: ['Hello!^500','My name is Noah Beightol ^500'],
           smartBackspace: true,
           typeSpeed: 70,
       });
@@ -26,84 +32,81 @@ const Home = () => {
       };
   }, []);
 
-  const handleScrollTo = (event, id) => {
-    event.preventDefault();
-    // Set the active section to this ID
-    setActiveSection(id);
-
-    // Scroll to the element with matching id
-    const target = document.getElementById(id);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
       <div>
         <div className='main-container'>
-          <div className='content-container'>
             <div className='title-container'>
               <span className="home-title" ref={el} />
             </div>
+          </div>
 
-            <div className="card-container" id="about-section">
-              <div className="card">
-                <div className='headshot-container'>
+          <div className='info-container'>
+            <div className='blurb'>
+              <div className='school-icon'>
+                <SchoolIcon sx={{ fontSize: 80 }}/>
+              </div>
+              <div className='school-text'>
+                  I studied computer science at the University of Central Florida
+                </div>
+            </div>
+
+            <div className='blurb'>
+              <div className='work-icon'>
+                <CodeIcon sx={{ fontSize: 80 }}/>
+              </div>
+              <div className='work-text'>
+                  I currently work at DICK'S Sporting Goods as a full stack Software Engineer
+                </div>
+            </div>
+
+            <div className='blurb'>
+              <div className='fun-icon'>
+                <ColorLensIcon sx={{ fontSize: 80 }}/>
+              </div>
+              <div className='fun-text'>
+                  I am an aspiring content creator who focuses on introspective content
+                </div>
+            </div>
+
+           
+            </div>
+            {/* <div className='headshot-container'>
                   <Avatar 
                     alt="Remy Sharp" 
                     src={headshot} 
                     sx={{ width: 120, height: 120 }}
                   />
-                </div>
-                
-                <div className='headshot-container'>
-                  I am currently a senior pursuing a Bachelor's Degree in Computer Science at the University of Central Florida. My interests lie in Big Data, Machine Learning, Artificial Intelligence, & Game Development. Additionally, I am an undergraduate researcher and work as a Peer Mentor for students interested in pursuing internship or research opportunities as well.
-                </div>
-              </div>
-              
-            </div>
+                </div> */}
 
-            <div className="card-container" id="experience-section">
-              <div className="card">
-              </div>
-            </div>
 
-            <div className="card-container" id="contact-section">
-              <div className="card">
-              </div>
-            </div>
-          </div>
-
-          <div className='bottom-container' role="presentation">
+                <div className='bottom-container' role="presentation">
             <Breadcrumbs className='bottom-container-text' aria-label="breadcrumb">
               <Link 
                 underline="hover" 
-                color={activeSection === 'about-section' ? 'text.primary' : 'inherit'}
-                href="#"
-                onClick={(e) => handleScrollTo(e, 'about-section')}
+                href="https://www.youtube.com/@PCguyNoah"
+                color='text.primary'
               >
-                About
+                <YouTubeIcon fontSize="large"/>
               </Link>
+
               <Link
                 underline="hover"
-                color={activeSection === 'experience-section' ? 'text.primary' : 'inherit'}
-                href="#"
-                onClick={(e) => handleScrollTo(e, 'experience-section')}
-              >
-                Experience
-              </Link>
-              <Link
-                underline="hover"
-                color={activeSection === 'contact-section' ? 'text.primary' : 'inherit'}
-                href="#"
-                onClick={(e) => handleScrollTo(e, 'contact-section')}
+                href="https://www.linkedin.com/in/noahbeightol/"
                 aria-current="page"
+                color='text.primary'
               >
-                Contact
+                <LinkedInIcon fontSize="large"/>
+              </Link>
+
+              <Link
+                underline="hover"
+                href="https://github.com/PCguyNoah"
+                color='text.primary'
+              >
+                <GitHubIcon fontSize="large"/>
               </Link>
             </Breadcrumbs>
           </div>
-        </div>
       </div>
   );
 }

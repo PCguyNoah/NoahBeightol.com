@@ -1,52 +1,79 @@
-/* Main container and navigation styles */
+
 .main-container {
+  padding-top: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-}
-.content-container {
-  display: block;
-  justify-items: flex-start;
 }
 
 .home-title {
-  color: #FFF;
+  padding-left: 20px;
+  color: #000000;
   font-size: 2rem;
   font-weight: 700;
 }
 
 .title-container {
-  padding-bottom: 3%;
-  padding-top: 5%;
+  height: 7rem;
+  padding-top: 50px;
 }
 
 .typed-cursor {
   font-size: 2rem;
-  color: #FFF;
+  color: #000000;
 }
 
-.card-container {
-  padding-bottom: 10%;
-}
-.card {
+.info-container {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 25px;
-  height: 75vw;
-  width: 75vw;
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  animation: expand 0.7s ease-out forwards;
-  animation-delay: 1.0s;
-  transition: width .3s;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.school-icon {
+  animation: rotateIn 0.2s ease-out forwards;
+  animation-delay: 0.2s; 
   opacity: 0;
 }
 
-.headshot-container {
+.work-icon {
+  animation: rotateIn 0.2s ease-out forwards; 
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.fun-icon {
+  animation: rotateIn 0.2s ease-out forwards; 
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.school-text {
+  animation: expand 0.2s ease-out forwards; 
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.work-text {
+  animation: expand 0.2s ease-out forwards; 
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.fun-text {
+  animation: expand 0.2s ease-out forwards; 
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+
+.blurb {
   display: flex;
-  justify-content: center;
-  padding-top: 25px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  height: 8rem;
+  width: 30rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .bottom-container {
@@ -56,70 +83,46 @@
   bottom: 0;
   width: 100%;
   background-color: transparent;
-  /* Adjust spacing as you like */
   padding: 1rem;  
   
 }
 .bottom-container-text {
   animation: expand 0.4s ease-out forwards;
-  animation-delay: 2.0s;
+  animation-delay: 1.2s;
   transition: width .3s;
   opacity: 0;
 }
 
-.branded-title-button {
-  height: 50px;
-  width: 100px;
-  background: none;
-  font-size: 1.5rem;
-  font-weight: 150;
-  border: none;
-}
-.branded-title-button:hover {
-  border: #000;
+@media only screen and (max-width: 600px) {
+  .info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
-.branded-button {
-  height: 50px;
-  width: 150px;
-  background-color: #000;
-  border: none;
-}
-.branded-button:hover {
-  background-color: #fff;
-  border-radius: 10px;
+@media only screen and (min-width: 600px) {
+  .info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
-.branded-text {
-  font-weight: 900;
+@media only screen and (min-width: 768px) {
+  .info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
-
-.branded-title {
-  padding-left: 20px;
-  font-weight: 700;
-  font-size: 2rem;
-  animation: rotateIn 0.2s ease-out forwards; 
-  transform-origin: left; 
-  opacity: 0;
-}
-
-.image {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.card2 img {
-  height: 100%;
-  width: 100%;
-}
-
-@keyframes floatIn {
+@keyframes rotateIn {
   0% {
-    transform: translate(-100px, 0);
+    transform: rotate(45deg); /* Start at -45 degrees */
     opacity: 0;
   }
   100% {
-    transform: translate(0, 0);
+    transform: rotate(0deg); /* End at 0 degrees (normal) */
     opacity: 1;
   }
 }
@@ -131,17 +134,6 @@
   }
   100% {
     transform: scale(1); /* Expand to full size */
-    opacity: 1;
-  }
-}
-
-@keyframes rotateIn {
-  0% {
-    transform: rotate(45deg); /* Start at -45 degrees */
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(0deg); /* End at 0 degrees (normal) */
     opacity: 1;
   }
 }
