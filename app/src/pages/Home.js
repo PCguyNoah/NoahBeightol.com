@@ -11,6 +11,8 @@ import Link from '@mui/material/Link';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Alert from '@mui/material/Alert';
+import CheckIcon from '@mui/icons-material/Check';
 
 const Home = () => {
   document.title = '| Noah Beightol'
@@ -67,19 +69,18 @@ const Home = () => {
                   I am an aspiring content creator who focuses on introspective content
                 </div>
             </div>
+          </div>
 
-           
+          <div className='alert-box'>
+            <div className='alert-info'>
+              <Alert className='alert-text' variant="filled" icon={<CheckIcon fontSize="inherit" />} severity="success">
+                Status: Noah currently has a job!
+              </Alert>
             </div>
-            {/* <div className='headshot-container'>
-                  <Avatar 
-                    alt="Remy Sharp" 
-                    src={headshot} 
-                    sx={{ width: 120, height: 120 }}
-                  />
-                </div> */}
-
-
-                <div className='bottom-container' role="presentation">
+          </div>
+          
+            
+          <div className='bottom-container' role="presentation">
             <Breadcrumbs className='bottom-container-text' aria-label="breadcrumb">
               <Link 
                 underline="hover" 
