@@ -22,9 +22,9 @@ const Home = () => {
   React.useEffect(() =>
   {
       const typed = new Typed(el.current, {
-          strings: ['Hello!^500','My name is Noah Beightol ^500'],
+          strings: ['Hello!','My name is Noah Beightol'],
           smartBackspace: true,
-          typeSpeed: 70,
+          typeSpeed: 25,
       });
 
       return () =>
